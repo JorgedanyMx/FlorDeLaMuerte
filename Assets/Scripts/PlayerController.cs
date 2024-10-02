@@ -10,11 +10,15 @@ public class PlayerController : MonoBehaviour
     public float tiempoMaximoEncendido = 5f;  // Tiempo máximo que puede estar encendida la luz
     public float cooldownDuracion = 3f;  // Duración del cooldown para volver a encender la luz
     public bool luzActiva = false;  // Para controlar si la luz está activada
+    public LayerMask capaGround;  // Capa para detectar el suelo
+
+    [SerializeField] private float contadorTiempo = 0f;  // Contador para el tiempo que la luz está activada    
 
     private bool puedeSaltarDoble = false;  // Controla si se puede hacer el segundo salto
-    private bool estaEnSuelo = false;  // Verifica si el jugador está en el suelo
-    [SerializeField] private float contadorTiempo = 0f;  // Contador para el tiempo que la luz está activada    
+    [SerializeField] private bool estaEnSuelo = false;  // Verifica si el jugador está en el suelo    
     private bool enCooldown = false;  // Controla si está en cooldown
+    private float longitudRaycast = 1f;  // Longitud del Raycast
+    
 
     private Rigidbody2D rb;
     void Awake()
@@ -28,6 +32,25 @@ public class PlayerController : MonoBehaviour
     {
         LightControl();
         playerMovement();
+        DetectarSuelo();
+    }
+    void DetectarSuelo()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, capaGround);
+        if (hit.collider != null)
+        {
+            estaEnSuelo = true;
+        }
+        else
+        {
+            estaEnSuelo = false;
+            Debug.Log("no detecta suelo");
+        }
+        Debug.DrawRay(transform.position, Vector2.down * longitudRaycast, Color.red);
+    }
+    public bool EstaEnSuelo()
+    {
+        return estaEnSuelo;
     }
     void playerMovement()
     {
@@ -72,32 +95,11 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Verifica si el jugador está tocando el suelo
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            estaEnSuelo = true;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        // Detecta cuándo el jugador deja de tocar el suelo
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            estaEnSuelo = false;
-        }
-    }
     void DesactivarLuzYEmpezarCooldown()
     {
         contadorTiempo = 0;
-        // Desactivar la luz
         luzActiva = false;
         brillo.SetActive(false);
-
-        // Iniciar la corrutina para el cooldown
         StartCoroutine(Cooldown());
     }
     IEnumerator Cooldown()
