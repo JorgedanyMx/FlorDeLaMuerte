@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public PlayerData playerData;
     public GameObject brillo;  // GameObject para Brillo
     public float velocidadMovimiento = 5f;  // Velocidad de movimiento del jugador
     public float fuerzaSalto = 7f;  // Fuerza de salto
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        LightControl();
+        if(playerData.hasLight) LightControl();
         playerMovement();
         DetectarSuelo();
     }
@@ -66,7 +67,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
                 puedeSaltarDoble = true;
             }
-            else if (puedeSaltarDoble)
+            else if (puedeSaltarDoble && playerData.hasDoubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
                 puedeSaltarDoble = false;  // Desactiva el doble salto después de usarlo
@@ -107,5 +108,16 @@ public class PlayerController : MonoBehaviour
         enCooldown = true;  // Marca que está en cooldown
         yield return new WaitForSeconds(cooldownDuracion);  // Espera el tiempo del cooldown
         enCooldown = false;  // Cooldown completado, puede activarse de nuevo
+    }
+    public void ChangeLightsize()
+    {
+        if(playerData.hasLightv2)
+        {
+            brillo.transform.localScale = Vector3.one * 4;
+        }
+        else
+        {
+            brillo.transform.localScale = Vector3.one * 3;
+        }
     }
 }

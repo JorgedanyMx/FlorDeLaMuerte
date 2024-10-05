@@ -5,5 +5,12 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     public bool hasLight = false;
+    public bool hasLightv2 = false;
     public bool hasDoubleJump = false;
+    public void ResetPlayerData()
+    {
+        hasLight = false;
+        hasLightv2 = false;
+        hasDoubleJump = false;
+    }
 }
