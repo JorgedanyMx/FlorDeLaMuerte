@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuerzaImpulso: 10
+  SoundSFXJump: {fileID: 11400000, guid: 4f2fbf6b38b84f74c9d2ea7979a467a7, type: 2}

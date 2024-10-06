@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    AudioSource environmentAudio;
-    private void Start()
+    [SerializeField] AudioSource environmentAudio;
+    [SerializeField] AudioSource SFX;
+    [SerializeField] AudioClip[] sounds;
+    public void JumpSound()
     {
-        environmentAudio = GetComponent<AudioSource>();
+        SFX.PlayOneShot(sounds[0]); 
     }
 }

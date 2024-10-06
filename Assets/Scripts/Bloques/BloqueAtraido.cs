@@ -25,15 +25,13 @@ public class BloqueAtraido : MonoBehaviour
         // Si está siendo atraído, mueve el bloque hacia "Light"
         if (atraido)
         {
-            // Mueve el bloque hacia el objeto "Light" a una distancia específica
-            Debug.DrawLine(posicionInicial, target.position,Color.red);
-            transform.position = Vector3.MoveTowards(transform.position, target.position, distanciaMov * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, distanciaMov * Time.deltaTime); // Mueve el bloque hacia el objeto "Light" a una distancia específica
         }
         else
         {
-            // Si no está siendo atraído, regresa el bloque a su posición inicial
-            transform.position = Vector3.MoveTowards(transform.position, posicionInicial, distanciaMov * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, posicionInicial, distanciaMov * Time.deltaTime);   // Si no está siendo atraído, regresa el bloque a su posición inicial
         }
+        Debug.DrawLine(posicionInicial, target.position, Color.red);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
