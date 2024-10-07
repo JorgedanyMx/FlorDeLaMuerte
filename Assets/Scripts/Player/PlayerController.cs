@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     void playerMovement()
     {
         // Movimiento del jugador
-        float movimientoHorizontal = Input.GetAxis("Horizontal");
+        float movimientoHorizontal = Input.GetAxis("Horizontal");        
         rb.velocity = new Vector2(movimientoHorizontal * velocidadMovimiento, rb.velocity.y);
 
         // Saltar y doble salto

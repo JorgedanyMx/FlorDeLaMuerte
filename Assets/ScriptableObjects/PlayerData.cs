@@ -13,4 +13,8 @@ public class PlayerData : ScriptableObject
         hasLightv2 = false;
         hasDoubleJump = false;
     }
+    public bool HasAllRemembers()
+    {
+        return hasLight & hasLightv2 & hasDoubleJump;
+    }
 }
