@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cd7e4221f0c47e47b7eaea7b4582f96, type: 3}
-  m_Name: EventLightAdquired
+  m_Name: SFXDoor
   m_EditorClassIdentifier: 

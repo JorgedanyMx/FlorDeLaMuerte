@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 5a1899570cf53144ab6e2cc312a62b3e
+guid: 01488549e07ebab40a0a8844e1b63709
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - SoundSFXJump: {fileID: 11400000, guid: 4f2fbf6b38b84f74c9d2ea7979a467a7, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
