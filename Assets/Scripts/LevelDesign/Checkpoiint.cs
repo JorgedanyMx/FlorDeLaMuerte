@@ -10,6 +10,7 @@ public class Checkpoiint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerData.SetCheckpointPosition(transform.position);
+            Destroy(transform.gameObject);
         }
     }
 }

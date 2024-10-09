@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaunchEvent : MonoBehaviour
+public class LevelUp : MonoBehaviour
 {
     
     public GameEvent lightEventv1;
@@ -18,6 +18,7 @@ public class LaunchEvent : MonoBehaviour
         {
             audioSource.PlayOneShot(audioClip);
             lightEventv1.Raise();
+            Destroy(transform.gameObject, 1f);
         }
     }
 }
