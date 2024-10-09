@@ -10,14 +10,17 @@ public class PlayerController : MonoBehaviour
     public float fuerzaSalto = 7f;  // Fuerza de salto
     public float tiempoMaximoEncendido = 5f;  // Tiempo máximo que puede estar encendida la luz
     public float cooldownDuracion = 3f;  // Duración del cooldown para volver a encender la luz
+    public float cooldownDuracionEspera = 1f;  // Duración del cooldown si no esta
     public bool luzActiva = false;  // Para controlar si la luz está activada
     public LayerMask capaGround;  // Capa para detectar el suelo
     [SerializeField] private bool estaEnSuelo = false;  // Verifica si el jugador está en el suelo    
     [SerializeField] private float contadorTiempo = 0f;  // Contador para el tiempo que la luz está activada    
+    [SerializeField] private float contadorTiempoEspera = 0f;  // Contador para el tiempo que la luz está activada    
     [SerializeField] private SpriteRenderer playerSprite;  // Contador para el tiempo que la luz está activada    
 
     private bool puedeSaltarDoble = false;  // Controla si se puede hacer el segundo salto    
     private bool enCooldown = false;  // Controla si está en cooldown
+    private bool enCooldownEspera = false;  // Controla si está en cooldown
     private float longitudRaycast = .7f;  // Longitud del Raycast
     private Rigidbody2D rb;
     private bool isdead=false;
@@ -101,6 +104,20 @@ public class PlayerController : MonoBehaviour
                 DesactivarLuzYEmpezarCooldown();
             }
         }
+        else
+        {
+            if (!enCooldown)
+            {
+                if (contadorTiempo > .2f)
+                {
+                    contadorTiempoEspera += Time.deltaTime;
+                    if (contadorTiempoEspera >= cooldownDuracionEspera)// Si el tiempo máximo se ha alcanzado, desactiva la luz y empieza el cooldown
+                    {
+                        DesactivarLuzYEmpezarCooldownEspera();
+                    }
+                }
+            }
+        }
     }
     void DesactivarLuzYEmpezarCooldown()
     {
@@ -108,6 +125,11 @@ public class PlayerController : MonoBehaviour
         luzActiva = false;
         brillo.SetActive(false);
         StartCoroutine(Cooldown());
+    }
+    void DesactivarLuzYEmpezarCooldownEspera()
+    {
+        contadorTiempoEspera = 0f;
+        contadorTiempo = 0f;
     }
     IEnumerator Cooldown()
     {
