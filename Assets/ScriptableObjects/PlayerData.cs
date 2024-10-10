@@ -9,6 +9,7 @@ public class PlayerData : ScriptableObject
     public bool hasDoubleJump = false;
     Vector3 checkpointposition = Vector3.zero;
     public bool controlEnable=true;
+    public bool isPaused = false;
     public void ResetPlayerData()
     {
         hasLight = false;

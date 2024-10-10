@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     private bool isdead=false;
     private Collider2D playerCollider;
 
-
     void Awake()
     {
         // Asigna el tag "Player"
@@ -65,7 +64,15 @@ public class PlayerController : MonoBehaviour
     void playerMovement()
     {
         // Movimiento del jugador
-        float movimientoHorizontal = Input.GetAxis("Horizontal");        
+        float movimientoHorizontal = Input.GetAxis("Horizontal");
+        if (movimientoHorizontal < 0)
+        {
+            playerSprite.flipX = true;
+        }
+        else
+        {
+            playerSprite.flipX = false;
+        }
         rb.velocity = new Vector2(movimientoHorizontal * velocidadMovimiento, rb.velocity.y);
 
         // Saltar y doble salto
@@ -80,6 +87,17 @@ public class PlayerController : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
                 puedeSaltarDoble = false;  // Desactiva el doble salto después de usarlo
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (playerData.isPaused)
+            {
+
+            }
+            else
+            {
+
             }
         }
     }

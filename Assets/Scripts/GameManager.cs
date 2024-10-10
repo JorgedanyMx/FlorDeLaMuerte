@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
         playerData.ResetPlayerData();
     }
     public PlayerData playerData;
-
-
     public void LevelUpLight()
     {
         if (playerData.hasLight) return;

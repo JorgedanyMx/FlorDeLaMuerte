@@ -14,6 +14,9 @@ public class AudioManager : MonoBehaviour
     }
     private void Update()
     {
-        if(!environmentAudioSource.isPlaying)
+        if (!environmentAudioSource.isPlaying)
+        {
+
+        }
     }
 }
