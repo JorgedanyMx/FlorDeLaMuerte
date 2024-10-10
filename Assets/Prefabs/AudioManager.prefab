@@ -48,10 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a35fd6d008f8374ab0ee53db7b2395f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentAudio: {fileID: 1282633987002379236}
+  environmentAudioSource: {fileID: 0}
   SFX: {fileID: 7878151102880709140}
   sounds:
   - {fileID: 8300000, guid: bea911b5cfd1735409b59ed25866aa8c, type: 3}
+  environmentSounds: []
 --- !u!82 &1282633987002379236
 AudioSource:
   m_ObjectHideFlags: 0
@@ -66,7 +67,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

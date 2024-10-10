@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c13f078d5be98d45994fdf538fe6388, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  hasLight: 1
-  hasLightv2: 1
-  hasDoubleJump: 1
+  hasLight: 0
+  hasLightv2: 0
+  hasDoubleJump: 0
   controlEnable: 1
+  isPaused: 0
