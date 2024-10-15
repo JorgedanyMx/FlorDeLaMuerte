@@ -8,20 +8,23 @@ public class BloquePesado : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Static;
+        //rb.bodyType = RigidbodyType2D.Static;
+        rb.mass = 1000;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Light"))
         {
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            //rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.mass = 10;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Light"))
         {
-            rb.bodyType = RigidbodyType2D.Static;
+            //rb.bodyType = RigidbodyType2D.Static;
+            rb.mass = 1000;
         }
     }
 }

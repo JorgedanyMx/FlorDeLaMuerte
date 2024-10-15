@@ -53,7 +53,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             estaEnSuelo = false;
-            Debug.Log("no detecta suelo");
         }
         Debug.DrawRay(transform.position, Vector2.down * longitudRaycast, Color.red);
     }

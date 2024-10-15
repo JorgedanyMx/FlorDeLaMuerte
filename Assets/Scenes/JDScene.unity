@@ -707,6 +707,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3a28c5efe424894f9824c3ac86c9d04, type: 3}
+--- !u!114 &930699276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
+  m_PrefabInstance: {fileID: 7871243006471221771}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a35fd6d008f8374ab0ee53db7b2395f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1143042107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1424,7 +1435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7262499920027744131, guid: 1a3b09f025273e64cbfd610e0dc1841c, type: 3}
       propertyPath: m_Radius
-      value: 1.02
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 7262499920027744131, guid: 1a3b09f025273e64cbfd610e0dc1841c, type: 3}
       propertyPath: m_Offset.x
@@ -1450,7 +1461,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 590447296260371227, guid: 3d4f9447d518165419e8fe5d0ecf3c50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 30.18
       objectReference: {fileID: 0}
     - target: {fileID: 590447296260371227, guid: 3d4f9447d518165419e8fe5d0ecf3c50, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1489,6 +1500,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2686217601507059727, guid: 3d4f9447d518165419e8fe5d0ecf3c50, type: 3}
+      propertyPath: offset.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686217601507059727, guid: 3d4f9447d518165419e8fe5d0ecf3c50, type: 3}
       propertyPath: objetoASeguir
       value: 
       objectReference: {fileID: 277489302}
@@ -1510,8 +1525,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1282633987002379236, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
-      propertyPath: Loop
-      value: 1
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3136409105624781543, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1553,10 +1568,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4830745172123008270, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 930699276}
     - target: {fileID: 6264039570793031687, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
+      propertyPath: environmentSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
+      propertyPath: environmentSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7853779423436f489a28b0ab2860346, type: 3}
+    - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
+      propertyPath: environmentSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 799cde34e24939748a9fb76f0d96d108, type: 3}
+    - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
+      propertyPath: environmentSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 799436f7e71168143b995b11e6f57001, type: 3}
+    - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
+      propertyPath: environmentSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: b66443f5c7ab4364fbad9cbcf53507e8, type: 3}
+    - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
+      propertyPath: environmentSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: f2069835009b8324187934732a104099, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

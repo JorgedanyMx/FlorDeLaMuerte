@@ -8,20 +8,13 @@ public class BloqueColumpio : MonoBehaviour
     void Start()
     {
         anim = transform.parent.GetComponent<Animator>();
-        anim.enabled = false;
+        //anim.enabled = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Light"))
         {
-            anim.enabled=true;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Light"))
-        {
-            anim.enabled = false;
+            anim.SetTrigger("PlayColumpio");
         }
     }
 }

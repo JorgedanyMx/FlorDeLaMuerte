@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 4830745172123008270}
   - component: {fileID: 7878151102880709140}
   - component: {fileID: -2152515074393780995}
+  - component: {fileID: 1992861185173594347}
+  - component: {fileID: 3616032126013919315}
+  - component: {fileID: 289187625810687502}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -48,11 +51,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a35fd6d008f8374ab0ee53db7b2395f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentAudioSource: {fileID: 0}
+  environmentAudioSource: {fileID: 1282633987002379236}
   SFX: {fileID: 7878151102880709140}
   sounds:
   - {fileID: 8300000, guid: bea911b5cfd1735409b59ed25866aa8c, type: 3}
-  environmentSounds: []
+  environmentSounds:
+  - {fileID: 8300000, guid: b7853779423436f489a28b0ab2860346, type: 3}
+  - {fileID: 8300000, guid: 799cde34e24939748a9fb76f0d96d108, type: 3}
+  - {fileID: 8300000, guid: 799436f7e71168143b995b11e6f57001, type: 3}
+  - {fileID: 8300000, guid: b66443f5c7ab4364fbad9cbcf53507e8, type: 3}
+  - {fileID: 8300000, guid: f2069835009b8324187934732a104099, type: 3}
 --- !u!82 &1282633987002379236
 AudioSource:
   m_ObjectHideFlags: 0
@@ -64,10 +72,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a89114c339077c540941431581a59bd9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -165,7 +173,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4830745172123008270}
+      - m_Target: {fileID: 8605444810042260300}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 0
@@ -292,6 +300,90 @@ MonoBehaviour:
       - m_Target: {fileID: 8605444810042260300}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: JumpSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1992861185173594347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264039570793031687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f985fc04b8f69d24aa9c1e02560e61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ce2c38cedc150db45951632468ddffa4, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8605444810042260300}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PrimerMovimiento
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3616032126013919315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264039570793031687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f985fc04b8f69d24aa9c1e02560e61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 9284d67d151b31940af4dee8a8e0fa72, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8605444810042260300}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SegundoMovimiento
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &289187625810687502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264039570793031687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f985fc04b8f69d24aa9c1e02560e61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 769a4c4cbb19d324bad019eea350d764, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8605444810042260300}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: TercerMovimiento
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
