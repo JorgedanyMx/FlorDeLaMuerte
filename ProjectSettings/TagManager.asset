@@ -43,9 +43,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Fondo
+  - name: Personaje
     uniqueID: 1075981117
     locked: 0
-  - name: Montes
+  - name: Piso
     uniqueID: 3982032259
+    locked: 0
+  - name: Plataformas
+    uniqueID: 1181251251
+    locked: 0
+  - name: Recuerdos
+    uniqueID: 707222009
+    locked: 0
+  - name: Abismos
+    uniqueID: 2467485753
+    locked: 0
+  - name: "Monta\xF1as"
+    uniqueID: 2667574247
+    locked: 0
+  - name: Fondo
+    uniqueID: 694684807
     locked: 0
