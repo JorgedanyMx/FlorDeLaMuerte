@@ -16,4 +16,4 @@ MonoBehaviour:
   hasLightv2: 0
   hasDoubleJump: 0
   controlEnable: 1
-  isPaused: 0
+  isPaused: 1
