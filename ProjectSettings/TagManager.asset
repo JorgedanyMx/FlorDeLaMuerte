@@ -37,9 +37,18 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Flower
+  - Blur
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 578295455
+    locked: 0
+  - name: Flower
+    uniqueID: 979420767
+    locked: 0
+  - name: Door
+    uniqueID: 1035458219
     locked: 0
