@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasLight: 1
   hasLightv2: 1
-  hasDoubleJump: 1
+  hasDoubleJump: 0
   controlEnable: 1
   isPaused: 1
