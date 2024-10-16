@@ -15,7 +15,12 @@ public class BloqueInvisible : MonoBehaviour
     }
     void SetInvisibleColor()
     {
-        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 0.1f);
+        Color spcolor = new Color(sp.color.r, sp.color.g, sp.color.b, 0.3f);
+        sp.material.SetColor("_Color", spcolor);
+    }
+    void SetBasicColor()
+    {
+        sp.material.SetColor("_Color", colorInitial);
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -29,7 +34,7 @@ public class BloqueInvisible : MonoBehaviour
     {
         if (collision.CompareTag("Light"))
         {
-            sp.color = colorInitial;
+            SetBasicColor();
             myCollider.isTrigger = false;
         }
     }

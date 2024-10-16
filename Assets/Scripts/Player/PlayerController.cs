@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private bool puedeSaltarDoble = false;  // Controla si se puede hacer el segundo salto    
     private bool enCooldown = false;  // Controla si está en cooldown
     private bool enCooldownEspera = false;  // Controla si está en cooldown
-    private float longitudRaycast = .7f;  // Longitud del Raycast
+    private float longitudRaycast = 1f;  // Longitud del Raycast
     private Rigidbody2D rb;
     private bool isdead=false;
     private Collider2D playerCollider;
@@ -156,14 +156,7 @@ public class PlayerController : MonoBehaviour
     }
     public void ChangeLightsize()
     {
-        if(playerData.hasLightv2)
-        {
-            brillo.transform.localScale = Vector3.one * 4;
-        }
-        else
-        {
-            brillo.transform.localScale = Vector3.one * 3;
-        }
+        brillo.transform.localScale = Vector3.one * 5;
     }
     void ReturnToCheckpoint()
     {

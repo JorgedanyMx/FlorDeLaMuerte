@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TitleDoorController : MonoBehaviour
 {
@@ -35,6 +36,6 @@ public class TitleDoorController : MonoBehaviour
 
     public void LoadScene()
     {
-        //Insert the logic to load the next scene
+        SceneManager.LoadScene(1);
     }
 }

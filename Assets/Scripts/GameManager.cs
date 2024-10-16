@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject nivelParte1;
+    public GameObject nivelParte2;
     private void Start()
     {
         playerData.ResetPlayerData();
+        ShowFirstZone();
     }
     public PlayerData playerData;
     public void LevelUpLight()
@@ -26,5 +29,21 @@ public class GameManager : MonoBehaviour
         if(playerData.hasLightv2) return;
         playerData.hasLightv2 = true;
         Debug.Log("BigLight Actived");
+    }
+    public void ShowFirstZone()
+    {
+        if(nivelParte1!=null && nivelParte2 != null)
+        {
+            nivelParte1.SetActive(true);
+            nivelParte2.SetActive(false);
+        }
+    }
+    public void ShowSecondZone()
+    {
+        if (nivelParte1 != null && nivelParte2 != null)
+        {
+            nivelParte1.SetActive(false);
+            nivelParte2.SetActive(true);
+        }
     }
 }
