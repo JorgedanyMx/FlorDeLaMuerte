@@ -963,6 +963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d5eb88a0acbd341941e6224e8c37d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseEnable: {fileID: 11400000, guid: 79b72aacbb9f2ed4ea4f1fc411b5cc29, type: 2}
+  pauseDisable: {fileID: 11400000, guid: a0d5af3f0030159418030173a2a2ffc8, type: 2}
 --- !u!1 &1817099179061130098
 GameObject:
   m_ObjectHideFlags: 0

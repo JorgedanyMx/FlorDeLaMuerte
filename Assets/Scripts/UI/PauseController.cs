@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class PauseController : MonoBehaviour
 {
+    [SerializeField] private GameEvent pauseEnable;
+    [SerializeField] private GameEvent pauseDisable;
     private GameObject pauseCanvasObj;
     private GameObject pausePanelObj;
     private GameObject SettingsPanelObj;
@@ -88,6 +90,7 @@ public class PauseController : MonoBehaviour
         pauseState = PauseState.Pause;
         Time.timeScale = 0;
         pauseCanvasObj.SetActive(true);
+        pauseEnable.Raise();
         SetPanel();     
     }
 
@@ -108,6 +111,7 @@ public class PauseController : MonoBehaviour
         SetPanel();
         pauseCanvasObj.SetActive(false);
         Time.timeScale = 1;
+        pauseDisable.Raise();
     }
 
     private void SetPanel()

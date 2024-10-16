@@ -33,9 +33,8 @@ public class TitleDoorController : MonoBehaviour
         }
     }
 
-    public void LoadScene(string sceneName)
+    public void LoadScene()
     {
-        Debug.Log("Loading scene: " + sceneName);
-        //UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        //Insert the logic to load the next scene
     }
 }
