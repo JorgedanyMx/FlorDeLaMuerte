@@ -3,7 +3,8 @@ guid: 5a1899570cf53144ab6e2cc312a62b3e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - SoundSFXJump: {fileID: 11400000, guid: 4f2fbf6b38b84f74c9d2ea7979a467a7, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

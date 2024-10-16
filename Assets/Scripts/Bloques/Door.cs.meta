@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7a8acc80f83e6f041a6e396bf170109e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerData: {fileID: 11400000, guid: f91cc614c417321498fe33dbdcee339c, type: 2}
+  - colliderShiled: {instanceID: 0}
+  - SFXDoorEvent: {fileID: 11400000, guid: 3e3c7142402b6be45b4442988d2447ce, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
