@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isdead=false;
     private Collider2D playerCollider;
+    private float tmpTiempoEncendido=1f;
 
     void Awake()
     {
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
         playerCollider = GetComponent<Collider2D>();
         brillo.SetActive(false);
         playerData.SetCheckpointPosition(transform.position);
+        tmpTiempoEncendido = tiempoMaximoEncendido;
     }
     void Update()
     {
@@ -156,7 +158,8 @@ public class PlayerController : MonoBehaviour
     }
     public void ChangeLightsize()
     {
-        brillo.transform.localScale = Vector3.one * 5;
+        brillo.transform.localScale = Vector3.one * 4;
+        tiempoMaximoEncendido = 2 * tiempoMaximoEncendido;
     }
     void ReturnToCheckpoint()
     {
