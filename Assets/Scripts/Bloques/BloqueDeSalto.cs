@@ -37,6 +37,7 @@ public class BloqueDeSalto : MonoBehaviour
                 if (luzActiva)
                 {
                     rbJugador.velocity = new Vector2(rbJugador.velocity.x, fuerzaImpulso);
+                    SoundSFXJump.Raise();
                 }
             }
         }
