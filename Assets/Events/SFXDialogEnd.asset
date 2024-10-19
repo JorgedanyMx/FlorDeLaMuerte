@@ -9,11 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c13f078d5be98d45994fdf538fe6388, type: 3}
-  m_Name: PlayerData
+  m_Script: {fileID: 11500000, guid: 5cd7e4221f0c47e47b7eaea7b4582f96, type: 3}
+  m_Name: SFXDialogEnd
   m_EditorClassIdentifier: 
-  hasLight: 1
-  hasLightv2: 0
-  hasDoubleJump: 0
-  controlEnable: 1
-  isPaused: 1
