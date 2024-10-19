@@ -17,6 +17,7 @@ public class BloquePesado : MonoBehaviour
         {
             //rb.bodyType = RigidbodyType2D.Dynamic;
             rb.mass = 10;
+            rb.freezeRotation = false;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -25,6 +26,7 @@ public class BloquePesado : MonoBehaviour
         {
             //rb.bodyType = RigidbodyType2D.Static;
             rb.mass = 1000;
+            rb.freezeRotation = true;
         }
     }
 }

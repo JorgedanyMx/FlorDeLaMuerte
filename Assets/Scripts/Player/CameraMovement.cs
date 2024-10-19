@@ -29,4 +29,9 @@ public class CameraMovement : MonoBehaviour
             transform.position = Vector3.SmoothDamp(transform.position, nuevaPosicion, ref velocidadActual, suavidadMovimiento);
         }
     }
+    public void SecondPartLEvel()
+    {
+        offset = new Vector3(-offset.x, offset.y, offset.z);
+    }
+    
 }

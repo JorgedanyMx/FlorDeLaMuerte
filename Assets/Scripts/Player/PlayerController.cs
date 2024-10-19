@@ -17,14 +17,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float contadorTiempo = 0f;  // Contador para el tiempo que la luz está activada    
     [SerializeField] private float contadorTiempoEspera = 0f;  // Contador para el tiempo que la luz está activada    
     [SerializeField] private SpriteRenderer playerSprite;  // Contador para el tiempo que la luz está activada    
+    [SerializeField] private Material CieloMat;  // Contador para el tiempo que la luz está activadaa
+    [SerializeField] private Material CieloMatInv;  // Contador para el tiempo que la luz está activadaa
 
     private bool puedeSaltarDoble = false;  // Controla si se puede hacer el segundo salto    
     private bool enCooldown = false;  // Controla si está en cooldown
     private bool enCooldownEspera = false;  // Controla si está en cooldown
-    private float longitudRaycast = .7f;  // Longitud del Raycast
+    private float longitudRaycast = 1f;  // Longitud del Raycast
     private Rigidbody2D rb;
     private bool isdead=false;
     private Collider2D playerCollider;
+    private float tmpTiempoEncendido=1f;
 
     void Awake()
     {
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
         playerCollider = GetComponent<Collider2D>();
         brillo.SetActive(false);
         playerData.SetCheckpointPosition(transform.position);
+        tmpTiempoEncendido = tiempoMaximoEncendido;
     }
     void Update()
     {
@@ -42,6 +46,7 @@ public class PlayerController : MonoBehaviour
         if(playerData.controlEnable) playerMovement();
         if (isdead) ReturnToCheckpoint();
         DetectarSuelo();
+        ParralaxMovement();
     }
     void DetectarSuelo()
     {
@@ -156,14 +161,8 @@ public class PlayerController : MonoBehaviour
     }
     public void ChangeLightsize()
     {
-        if(playerData.hasLightv2)
-        {
-            brillo.transform.localScale = Vector3.one * 4;
-        }
-        else
-        {
-            brillo.transform.localScale = Vector3.one * 3;
-        }
+        brillo.transform.localScale = Vector3.one * 4;
+        tiempoMaximoEncendido = 2 * tiempoMaximoEncendido;
     }
     void ReturnToCheckpoint()
     {
@@ -190,5 +189,18 @@ public class PlayerController : MonoBehaviour
         isdead = true;
         playerCollider.enabled = false;
         playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0.1f);
+    }
+    void ParralaxMovement()
+    {
+        if (CieloMat != null && CieloMatInv!=null)
+        {
+            float tmpX = CieloMat.mainTextureOffset.x;
+            tmpX = CieloMat.mainTextureOffset.x+rb.velocity.x*.00005f;
+            CieloMat.mainTextureOffset = new Vector2(tmpX, 0);
+
+            float tmpXInv = CieloMatInv.mainTextureOffset.x;
+            tmpX = CieloMatInv.mainTextureOffset.x - rb.velocity.x * .00005f;
+            CieloMatInv.mainTextureOffset = new Vector2(tmpX, 0);
+        }
     }
 }

@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
     [SerializeField] PlayerData playerData;
     [SerializeField] Collider2D colliderShiled;
     [SerializeField] GameEvent SFXDoorEvent;
+    [SerializeField] GameEvent EventGameEnds;
     public float fuerzaImpulso = 10f;
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -26,6 +27,14 @@ public class Door : MonoBehaviour
                     Debug.Log("Entra");
                 }
             }
+        }
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            EventGameEnds.Raise();
         }
     }
 }
