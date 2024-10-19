@@ -46,6 +46,9 @@ TagManager:
   - name: Background
     uniqueID: 578295455
     locked: 0
+  - name: humo
+    uniqueID: 3186984619
+    locked: 0
   - name: Flower
     uniqueID: 979420767
     locked: 0
