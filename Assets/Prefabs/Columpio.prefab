@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6659390648308164670}
   - component: {fileID: 4926688488237945052}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275817913217148708}
   - component: {fileID: 8439359235464737434}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ColumpioIMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
