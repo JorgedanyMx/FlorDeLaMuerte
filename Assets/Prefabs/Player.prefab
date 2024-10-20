@@ -287,7 +287,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3bf00800401ddd748a0bacc7b74d62cc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c331c03e263541d4ba54ca45e419434b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -638,7 +638,6 @@ MonoBehaviour:
   contadorTiempoEspera: 0
   playerSprite: {fileID: 2923872778091949110}
   CieloMat: {fileID: 0}
-  CieloMatInv: {fileID: 0}
 --- !u!58 &7262499920027744131
 CircleCollider2D:
   m_ObjectHideFlags: 0
