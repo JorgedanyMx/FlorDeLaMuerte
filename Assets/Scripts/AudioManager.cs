@@ -6,9 +6,13 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource environmentAudioSource;
     [SerializeField] AudioSource SFX;
+    [SerializeField] AudioSource voiceAudioSource;
     [SerializeField] AudioClip[] sounds;
     [SerializeField] AudioClip[] environmentSounds;
+    [SerializeField] AudioClip[] dialogSounds;
+    [SerializeField] GameEvent dialogEndEvent;
     AudioClip nextTrack;
+    int dialogIndex = 0;
     private void Start()
     {
         environmentAudioSource.loop = false;
@@ -47,4 +51,21 @@ public class AudioManager : MonoBehaviour
     {
         nextTrack = environmentSounds[4];
     }
+
+    public void DialogSFX()
+    {
+        voiceAudioSource.Stop();
+        voiceAudioSource.PlayOneShot(dialogSounds[dialogIndex]); 
+        dialogIndex++;
+        StartCoroutine(WaitForDialogEnd());
+        
+    }
+
+    private IEnumerator  WaitForDialogEnd()
+    {
+        yield return new WaitForSeconds(dialogSounds[dialogIndex-1].length);
+        dialogEndEvent.Raise();
+
+    }
+
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseController : MonoBehaviour
@@ -146,5 +147,6 @@ public class PauseController : MonoBehaviour
     private void ExitGame()
     {
         Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }
