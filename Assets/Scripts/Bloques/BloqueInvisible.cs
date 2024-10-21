@@ -6,11 +6,13 @@ public class BloqueInvisible : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer sp;
     BoxCollider2D myCollider;
+    AudioSource SFXHumo;
     private Color colorInitial;
     private void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
         myCollider = GetComponent<BoxCollider2D>();
+        SFXHumo = GetComponent<AudioSource>();
         colorInitial = sp.color;
     }
     void SetInvisibleColor()
@@ -26,6 +28,7 @@ public class BloqueInvisible : MonoBehaviour
     {
         if (collision.CompareTag("Light"))
         {
+            if (SFXHumo.isPlaying) SFXHumo.Stop();
             SetInvisibleColor();
             myCollider.isTrigger = true;
         }
@@ -34,6 +37,7 @@ public class BloqueInvisible : MonoBehaviour
     {
         if (collision.CompareTag("Light"))
         {
+            if (!SFXHumo.isPlaying) SFXHumo.Play();
             SetBasicColor();
             myCollider.isTrigger = false;
         }
@@ -42,6 +46,7 @@ public class BloqueInvisible : MonoBehaviour
     {
         if (collision.collider.CompareTag("Light"))
         {
+            if (!SFXHumo.isPlaying) SFXHumo.Play();
             sp.color = colorInitial;
             myCollider.isTrigger = false;
         }

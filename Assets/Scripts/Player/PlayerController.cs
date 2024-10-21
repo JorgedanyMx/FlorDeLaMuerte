@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float contadorTiempoEspera = 0f;  // Contador para el tiempo que la luz está activada    
     [SerializeField] private SpriteRenderer playerSprite;  // Contador para el tiempo que la luz está activada    
     [SerializeField] private Material CieloMat;  // Contador para el tiempo que la luz está activadaa
+    [SerializeField] private GameEvent IsPlayingAgainEvent;
 
     private bool puedeSaltarDoble = false;  // Controla si se puede hacer el segundo salto    
     private bool enCooldown = false;  // Controla si está en cooldown
@@ -181,6 +182,7 @@ public class PlayerController : MonoBehaviour
             isdead = false;
             playerCollider.enabled = true;
             playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+            IsPlayingAgainEvent.Raise();
         }
     }
     public void Dead()

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2691499061604742714}
   - component: {fileID: 2884734270429980751}
   - component: {fileID: 874079998837721440}
+  - component: {fileID: 1382159228608703601}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -63,12 +64,14 @@ MonoBehaviour:
   voiceAudioSource: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: bea911b5cfd1735409b59ed25866aa8c, type: 3}
+  - {fileID: 8300000, guid: 9aa7776830808634c94e3649cfe585c1, type: 3}
   environmentSounds:
-  - {fileID: 8300000, guid: b7853779423436f489a28b0ab2860346, type: 3}
-  - {fileID: 8300000, guid: 799cde34e24939748a9fb76f0d96d108, type: 3}
-  - {fileID: 8300000, guid: e4f33a8393c56fa4585a4e041a2b5663, type: 3}
-  - {fileID: 8300000, guid: 9b73bafbea26f2442bce080a631e5ded, type: 3}
+  - {fileID: 8300000, guid: 542016474c41f1d4e832214651a2bca7, type: 3}
+  - {fileID: 8300000, guid: f52a169ce71a5724fa13911567d6073a, type: 3}
+  - {fileID: 8300000, guid: 51d82d4398e3c3940911b06a2ce093e2, type: 3}
+  - {fileID: 8300000, guid: 2450c06e26bdb17448c66b637341bf8f, type: 3}
   - {fileID: 8300000, guid: c363db9824bb8394f9150e86d3052f96, type: 3}
+  - {fileID: 8300000, guid: 80689e7f45b4c0840a745def1c18a630, type: 3}
   dialogSounds: []
   dialogEndEvent: {fileID: 11400000, guid: 690e786f2d8ef674cbd18406394a1a65, type: 2}
 --- !u!82 &1282633987002379236
@@ -83,7 +86,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 799cde34e24939748a9fb76f0d96d108, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -179,17 +182,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f985fc04b8f69d24aa9c1e02560e61bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 32c1c0d94dc2cc940a721f14c13f74a0, type: 2}
+  Event: {fileID: 11400000, guid: 4b56b420096cc5d43b76aec660304b15, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8605444810042260300}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: BackToCheckpoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -710,6 +713,34 @@ MonoBehaviour:
       - m_Target: {fileID: 8605444810042260300}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Finale
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1382159228608703601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264039570793031687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f985fc04b8f69d24aa9c1e02560e61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 83095a782eb07fe489a0193c492234cf, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8605444810042260300}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
