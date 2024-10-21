@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float contadorTiempoEspera = 0f;  // Contador para el tiempo que la luz está activada    
     [SerializeField] private SpriteRenderer playerSprite;  // Contador para el tiempo que la luz está activada    
     [SerializeField] private Material CieloMat;  // Contador para el tiempo que la luz está activadaa
-    [SerializeField] private Material CieloMatInv;  // Contador para el tiempo que la luz está activadaa
+    [SerializeField] private GameEvent IsPlayingAgainEvent;
 
     private bool puedeSaltarDoble = false;  // Controla si se puede hacer el segundo salto    
     private bool enCooldown = false;  // Controla si está en cooldown
@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
         brillo.SetActive(false);
         playerData.SetCheckpointPosition(transform.position);
         tmpTiempoEncendido = tiempoMaximoEncendido;
+        if (CieloMat != null) CieloMat.mainTextureOffset = Vector2.zero;
     }
     void Update()
     {
@@ -181,10 +182,12 @@ public class PlayerController : MonoBehaviour
             isdead = false;
             playerCollider.enabled = true;
             playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+            IsPlayingAgainEvent.Raise();
         }
     }
     public void Dead()
     {
+        DesactivarLuzYEmpezarCooldown();
         playerData.controlEnable = false;
         isdead = true;
         playerCollider.enabled = false;
@@ -192,15 +195,13 @@ public class PlayerController : MonoBehaviour
     }
     void ParralaxMovement()
     {
-        if (CieloMat != null && CieloMatInv!=null)
+        if (CieloMat != null)
         {
             float tmpX = CieloMat.mainTextureOffset.x;
-            tmpX = CieloMat.mainTextureOffset.x+rb.velocity.x*.00005f;
-            CieloMat.mainTextureOffset = new Vector2(tmpX, 0);
-
-            float tmpXInv = CieloMatInv.mainTextureOffset.x;
-            tmpX = CieloMatInv.mainTextureOffset.x - rb.velocity.x * .00005f;
-            CieloMatInv.mainTextureOffset = new Vector2(tmpX, 0);
+            float tmpY = CieloMat.mainTextureOffset.x;
+            tmpX = CieloMat.mainTextureOffset.x+rb.velocity.x*.000003f;
+            tmpY = CieloMat.mainTextureOffset.y + rb.velocity.y * .000003f;
+            CieloMat.mainTextureOffset = new Vector2(tmpX, tmpY);
         }
     }
 }

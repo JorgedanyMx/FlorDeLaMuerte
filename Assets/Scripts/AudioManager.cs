@@ -5,46 +5,98 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource environmentAudioSource;
+    [SerializeField] AudioSource environmentAudioSource1;
+    [SerializeField] AudioSource environmentAudioSource2;
+    [SerializeField] AudioSource environmentAudioSource3;
     [SerializeField] AudioSource SFX;
+    [SerializeField] AudioSource voiceAudioSource;
     [SerializeField] AudioClip[] sounds;
     [SerializeField] AudioClip[] environmentSounds;
+    [SerializeField] AudioClip[] dialogSounds;
+    [SerializeField] GameEvent dialogEndEvent;
     AudioClip nextTrack;
-    private void Start()
+    int dialogIndex = 0;
+    void Awake()
     {
-        environmentAudioSource.loop = false;
-        environmentAudioSource.PlayOneShot(environmentSounds[0]);
-        nextTrack = environmentSounds[0];
+        StartEnvironmentSoundEnvironmentSounds();
     }
     public void JumpSound()
     {
         SFX.PlayOneShot(sounds[0]); 
     }
-    private void Update()
-    {
-        if (!environmentAudioSource.isPlaying)
-        {
-            environmentAudioSource.PlayOneShot(nextTrack);
-            Debug.Log("Playing"+ nextTrack.name);
-        }
-    }
-    void NextEnvironmentSound(AudioClip clipEnvironment)
-    {
-        nextTrack = clipEnvironment;
-    }
-    public void PrologoMovimiento()
-    {
-        nextTrack = environmentSounds[1];
-    }
     public void PrimerMovimiento()
     {
-        nextTrack = environmentSounds[2];
+        StartCoroutine(FadeInVolume(5f, environmentAudioSource1));
     }
     public void SegundoMovimiento()
     {
-        nextTrack = environmentSounds[3];
+        StartCoroutine(FadeInVolume(5f, environmentAudioSource2));
     }
     public void TercerMovimiento()
     {
-        nextTrack = environmentSounds[4];
+        StartCoroutine(FadeInVolume(5f, environmentAudioSource3));
+    }
+
+    public void DialogSFX()
+    {
+        voiceAudioSource.Stop();
+        voiceAudioSource.PlayOneShot(dialogSounds[dialogIndex]); 
+        dialogIndex++;
+        StartCoroutine(WaitForDialogEnd());
+        
+    }
+    private IEnumerator  WaitForDialogEnd()
+    {
+        yield return new WaitForSeconds(dialogSounds[dialogIndex-1].length);
+        dialogEndEvent.Raise();
+
+    }
+    void StartEnvironmentSoundEnvironmentSounds()
+    {
+        environmentAudioSource.clip = environmentSounds[1];
+        environmentAudioSource1.clip = environmentSounds[2];
+        environmentAudioSource2.clip = environmentSounds[3];
+        environmentAudioSource3.clip = environmentSounds[4];
+        environmentAudioSource1.volume = 0f;
+        environmentAudioSource2.volume = 0f;
+        environmentAudioSource3.volume = 0f;
+        environmentAudioSource.Play();
+        environmentAudioSource1.Play();
+        environmentAudioSource2.Play();
+        environmentAudioSource3.Play();
+    }
+    IEnumerator FadeInVolume(float duration,AudioSource tmpAudioSource)
+    {
+        float currentTime = 0f; // Contador de tiempo
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime; // Incrementa el tiempo transcurrido
+            tmpAudioSource.volume = Mathf.Lerp(0f, 1f, currentTime / duration); // Ajusta el volumen
+            yield return null; // Espera un frame antes de continuar
+        }
+        // Asegúrate de que el volumen llegue exactamente a 1
+        tmpAudioSource.volume = 1f;
+    }
+    void StopEnvironmentAudios()
+    {
+        environmentAudioSource.Stop();
+        environmentAudioSource1.Stop();
+        environmentAudioSource2.Stop();
+        environmentAudioSource3.Stop();
+    }
+    public void Finale()
+    {
+        StopEnvironmentAudios();
+        environmentAudioSource.clip = environmentAudioSource3.clip = environmentSounds[5];
+        environmentAudioSource.Play();
+    }
+    public void BackToCheckpoint()
+    {
+        SFX.PlayOneShot(sounds[1]);
+    }
+    public void StopSFX()
+    {
+        SFX.Stop();
     }
 }

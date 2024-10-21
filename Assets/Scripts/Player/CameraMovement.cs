@@ -9,6 +9,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] float suavidadMovimiento = 0.3f;  // Suavidad del movimiento (a menor valor, más rápido sigue la cámara)
     private Vector3 velocidadActual;  // Velocidad actual usada por SmoothDamp
     [SerializeField]private float multispeed;
+    [SerializeField] GameObject finaleobj;
     private void LateUpdate()
     {
         SeguirObjeto();
@@ -33,5 +34,8 @@ public class CameraMovement : MonoBehaviour
     {
         offset = new Vector3(-offset.x, offset.y, offset.z);
     }
-    
+    public void Finale()
+    {
+        finaleobj.SetActive(true);
+    }
 }
