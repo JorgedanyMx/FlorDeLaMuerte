@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   hasLight: 1
-  hasLightv2: 0
-  hasDoubleJump: 1
-  controlEnable: 1
+  hasLightv2: 1
+  hasDoubleJump: 0
+  controlEnable: 0
   isPaused: 1
