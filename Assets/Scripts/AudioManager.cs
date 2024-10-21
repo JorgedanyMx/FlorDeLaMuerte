@@ -91,4 +91,12 @@ public class AudioManager : MonoBehaviour
         environmentAudioSource.clip = environmentAudioSource3.clip = environmentSounds[5];
         environmentAudioSource.Play();
     }
+    public void BackToCheckpoint()
+    {
+        SFX.PlayOneShot(sounds[1]);
+    }
+    public void StopSFX()
+    {
+        SFX.Stop();
+    }
 }

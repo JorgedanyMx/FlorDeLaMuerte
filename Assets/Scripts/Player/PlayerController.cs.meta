@@ -6,6 +6,9 @@ MonoImporter:
   defaultReferences:
   - playerData: {fileID: 11400000, guid: f91cc614c417321498fe33dbdcee339c, type: 2}
   - brillo: {instanceID: 0}
+  - playerSprite: {instanceID: 0}
+  - CieloMat: {instanceID: 0}
+  - IsPlayingAgainEvent: {fileID: 11400000, guid: 83095a782eb07fe489a0193c492234cf, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

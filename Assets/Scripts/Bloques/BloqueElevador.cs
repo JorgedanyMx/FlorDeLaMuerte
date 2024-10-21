@@ -8,9 +8,11 @@ public class BloqueElevador : MonoBehaviour
     [SerializeField] GameObject Punto1;
     [SerializeField] GameObject Punto2;
     bloqueState bState = bloqueState.bloqueA;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         if(Punto1.GetComponent<SpriteRenderer>()!=null)
             Punto1.GetComponent<SpriteRenderer>().enabled = false;
         if (Punto2.GetComponent<SpriteRenderer>() != null)
@@ -51,6 +53,7 @@ public class BloqueElevador : MonoBehaviour
     {
         if (collision.CompareTag("Light"))
         {
+            if (!audioSource.isPlaying) audioSource.Play();
             if (bState == bloqueState.bloqueA)
                 bState = bloqueState.movingToB;
             if (bState == bloqueState.bloqueB)
