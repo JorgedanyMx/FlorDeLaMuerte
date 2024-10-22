@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 000000009f1678225fc6603aabd6b73dab86f5bd
+  m_ApplyToSortingLayers: 000000009f1678225fc6603aabd6b73d91446dce
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 1030110402288638845}
   - component: {fileID: 7497453377122324937}
   - component: {fileID: 6668357566889556415}
+  - component: {fileID: 7559375494083330768}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -456,6 +457,34 @@ MonoBehaviour:
   maxShadowDistance: 10
   minShadowSize: 0.2
   maxShadowSize: 1
+--- !u!114 &7559375494083330768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212901161940134162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f985fc04b8f69d24aa9c1e02560e61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 808bc04bcd9c40f43a5e02c1aad23162, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3212901161940134162}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3573112925925573597
 GameObject:
   m_ObjectHideFlags: 0

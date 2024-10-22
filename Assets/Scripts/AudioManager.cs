@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
     }
     public void JumpSound()
     {
-        SFX.PlayOneShot(sounds[0]); 
+        SFX.PlayOneShot(sounds[0]);
     }
     public void PrimerMovimiento()
     {
@@ -40,14 +40,14 @@ public class AudioManager : MonoBehaviour
     public void DialogSFX()
     {
         voiceAudioSource.Stop();
-        voiceAudioSource.PlayOneShot(dialogSounds[dialogIndex]); 
+        voiceAudioSource.PlayOneShot(dialogSounds[dialogIndex]);
         dialogIndex++;
         StartCoroutine(WaitForDialogEnd());
-        
+
     }
-    private IEnumerator  WaitForDialogEnd()
+    private IEnumerator WaitForDialogEnd()
     {
-        yield return new WaitForSeconds(dialogSounds[dialogIndex-1].length);
+        yield return new WaitForSeconds(dialogSounds[dialogIndex - 1].length);
         dialogEndEvent.Raise();
 
     }
@@ -65,7 +65,7 @@ public class AudioManager : MonoBehaviour
         environmentAudioSource2.Play();
         environmentAudioSource3.Play();
     }
-    IEnumerator FadeInVolume(float duration,AudioSource tmpAudioSource)
+    IEnumerator FadeInVolume(float duration, AudioSource tmpAudioSource)
     {
         float currentTime = 0f; // Contador de tiempo
 
@@ -98,5 +98,45 @@ public class AudioManager : MonoBehaviour
     public void StopSFX()
     {
         SFX.Stop();
+    }
+    public void PlayCreditos()
+    {
+        StopEnvironmentAudios();
+        environmentAudioSource.clip = environmentSounds[6];
+        environmentAudioSource.Play();
+        Debug.Log("PlayCreditsop");
+    }
+    public void SetPause(bool setPause)
+    {
+        if (setPause)
+        {
+            PauseAllAudioSources();
+        }
+        else
+        {
+            ResumeAllAudioSources();
+        }
+    }
+    void PauseAllAudioSources()
+    {
+        // Obtener todos los AudioSource en la escena
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+
+        // Recorrer todos los AudioSource y pausarlos
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            audioSource.Pause();
+        }
+    }
+    void ResumeAllAudioSources()
+    {
+        // Obtener todos los AudioSource en la escena
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+
+        // Recorrer todos los AudioSource y reanudarlos
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            audioSource.UnPause();
+        }
     }
 }

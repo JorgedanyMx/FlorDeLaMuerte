@@ -22,6 +22,9 @@ GameObject:
   - component: {fileID: 2884734270429980751}
   - component: {fileID: 874079998837721440}
   - component: {fileID: 1382159228608703601}
+  - component: {fileID: 7541799686281751249}
+  - component: {fileID: 6982630430074805578}
+  - component: {fileID: 5519465357064223060}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -72,6 +75,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2450c06e26bdb17448c66b637341bf8f, type: 3}
   - {fileID: 8300000, guid: c363db9824bb8394f9150e86d3052f96, type: 3}
   - {fileID: 8300000, guid: 80689e7f45b4c0840a745def1c18a630, type: 3}
+  - {fileID: 8300000, guid: cc371d9bdbd110d4b82af886258118f6, type: 3}
   dialogSounds: []
   dialogEndEvent: {fileID: 11400000, guid: 690e786f2d8ef674cbd18406394a1a65, type: 2}
 --- !u!82 &1282633987002379236
@@ -741,6 +745,90 @@ MonoBehaviour:
       - m_Target: {fileID: 8605444810042260300}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: StopSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7541799686281751249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264039570793031687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f985fc04b8f69d24aa9c1e02560e61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 79b72aacbb9f2ed4ea4f1fc411b5cc29, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8605444810042260300}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SetPause
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &6982630430074805578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264039570793031687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f985fc04b8f69d24aa9c1e02560e61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: a0d5af3f0030159418030173a2a2ffc8, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8605444810042260300}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SetPause
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5519465357064223060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264039570793031687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f985fc04b8f69d24aa9c1e02560e61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7ae56d2286af42c43b9389fc9ed5e051, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8605444810042260300}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayCreditos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

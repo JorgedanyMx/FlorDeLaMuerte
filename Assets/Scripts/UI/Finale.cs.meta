@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 9526ad904fd4611468ca82694e39b6dc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - SFXCreditosEvent: {fileID: 11400000, guid: 7ae56d2286af42c43b9389fc9ed5e051, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

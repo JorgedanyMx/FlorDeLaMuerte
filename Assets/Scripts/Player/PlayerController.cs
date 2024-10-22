@@ -94,17 +94,6 @@ public class PlayerController : MonoBehaviour
                 puedeSaltarDoble = false;  // Desactiva el doble salto después de usarlo
             }
         }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            if (playerData.isPaused)
-            {
-
-            }
-            else
-            {
-
-            }
-        }
     }
     void LightControl()
     {
@@ -202,6 +191,20 @@ public class PlayerController : MonoBehaviour
             tmpX = CieloMat.mainTextureOffset.x+rb.velocity.x*.000003f;
             tmpY = CieloMat.mainTextureOffset.y + rb.velocity.y * .000003f;
             CieloMat.mainTextureOffset = new Vector2(tmpX, tmpY);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Humo"))
+        {
+            playerSprite.sortingLayerName = "humo";
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Humo"))
+        {
+            playerSprite.sortingLayerName = "Default";
         }
     }
 }

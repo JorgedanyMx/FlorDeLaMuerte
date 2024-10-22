@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/AndresScene.unity
     guid: 3bff8680b4986de40bb46980205dba54
   - enabled: 1
-    path: Assets/Scenes/EvangeloSC.unity
-    guid: a8a956a3491a2e34d8cf7e4b5d19ebf5
+    path: Assets/Scenes/Final_Scene.unity
+    guid: c3ed6a0c6eb70c0428749bce12c16f6e
   m_configObjects: {}
