@@ -11,6 +11,7 @@ public class PauseController : MonoBehaviour
     private GameObject SettingsPanelObj;
     private GameObject ConfirmPanelObj;
     private PauseState pauseState = PauseState.Resume;
+    AudioSource audioSource;
 
     private enum PauseState : int 
     {
@@ -22,6 +23,7 @@ public class PauseController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         InitOBJ();
         SetPanel();
         pauseCanvasObj.SetActive(false);
@@ -30,7 +32,7 @@ public class PauseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P) )
+        if(Input.GetKeyDown(KeyCode.Escape) )
         {
             if(pauseState == PauseState.Resume)PauseGame();
             else if (pauseState == PauseState.Pause) ResumeGame();
@@ -92,6 +94,7 @@ public class PauseController : MonoBehaviour
         Time.timeScale = 0;
         pauseCanvasObj.SetActive(true);
         pauseEnable.Raise();
+        audioSource.UnPause();
         SetPanel();     
     }
 
@@ -142,6 +145,10 @@ public class PauseController : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void PlaySoundSFX()
+    {
+        audioSource.Play();
     }
 
     private void ExitGame()

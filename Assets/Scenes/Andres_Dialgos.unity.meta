@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/CopyEvangelo_SC_2.unity.meta
+guid: de324e6907794ac44bcc4c1db185f6a5
+========
 guid: 3504c9b7082aafa40b6a3af14f165a9d
+>>>>>>>> AndresBranch:Assets/Scenes/Andres_Dialgos.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

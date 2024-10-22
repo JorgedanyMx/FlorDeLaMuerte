@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Light
+  - Humo
   layers:
   - Default
   - TransparentFX
@@ -46,9 +47,6 @@ TagManager:
   - name: Background
     uniqueID: 578295455
     locked: 0
-  - name: humo
-    uniqueID: 3463267473
-    locked: 0
   - name: Flower
     uniqueID: 979420767
     locked: 0
@@ -63,6 +61,9 @@ TagManager:
     locked: 0
   - name: montanias
     uniqueID: 1156873293
+    locked: 0
+  - name: humo
+    uniqueID: 3463267473
     locked: 0
   - name: piso
     uniqueID: 1422349159
