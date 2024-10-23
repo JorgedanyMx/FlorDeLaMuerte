@@ -551,6 +551,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finale
       objectReference: {fileID: 0}
+    - target: {fileID: 2726087490926217996, guid: 2464faf84405f4f4cbd0f7f13080c445, type: 3}
+      propertyPath: m_text
+      value: "CR\xC9DITOS:\r\n\nProducci\xF3n: \r\nEvangelo Ruiz Morales\r\n\nGame
+        Design:\r\n-Evangelo Ruiz Morales.\r\n-Jorge Daniel Guerrero.\r\n\nAsistente
+        de Game Design:\r\n-Iv\xE1n Saucedo.\r\n\nProgramador L\xEDder: \r\n-Jorge
+        Daniel Guerrero.\r\n\nProgramaci\xF3n Interfaz: \r\n-Andr\xE9s Castro.\r\n\nProgramaci\xF3n
+        Control de volumen:\r\n -Andr\xE9s Castro.\r\n\nComposici\xF3n sonora: \r\n-Vae.\r\n\nDise\xF1o
+        sonoro:\r\n-Vae.\r\n-Jorge Daniel Guerrero.\r\n\nDirecci\xF3n de Arte: \r\n-Sandra
+        Isabel Puente Figueroa.\r\n\nConcept Art:\r\n-Sandra Isabel Puente Figueroa.\r\n\nArte
+        digital:\r\n-Fernanda Adriano.\r\n-Bernardo Vez De La Garza.\r\n\nNarrativa:
+        \r\n-Evangelo Ruiz Morales.\r\n\nNarrativa visual:\r\n-Sandra Isabel Puente
+        Figueroa.\r\n\nVoz de Madre:\r\n-???\r\n\r\n\r\nEn Memoria de:\r\n-Rafael
+        Alfaro Ruiz.\r\n-Eustaquio Enciso Guti\xE9rrez.\n-Mario G\xF3mez\n-Rosinda
+        Figueroa"
+      objectReference: {fileID: 0}
     - target: {fileID: 3367108277602502130, guid: 2464faf84405f4f4cbd0f7f13080c445, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.49
