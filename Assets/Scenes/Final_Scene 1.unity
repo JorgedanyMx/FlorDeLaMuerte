@@ -2906,6 +2906,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1025412895165561445, guid: 8f3b5b3294dd76a49be6b8e9e748cb91, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -38.7
+      objectReference: {fileID: 0}
     - target: {fileID: 1085094790933574408, guid: 8f3b5b3294dd76a49be6b8e9e748cb91, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2992,7 +2996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2791589527485499583, guid: 8f3b5b3294dd76a49be6b8e9e748cb91, type: 3}
       propertyPath: dialogTexts.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8880404970298063721, guid: 8f3b5b3294dd76a49be6b8e9e748cb91, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3002,7 +3006,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9144316392248652607, guid: 8f3b5b3294dd76a49be6b8e9e748cb91, type: 3}
-      insertIndex: -1
+      insertIndex: 1
       addedObject: {fileID: 1212030348}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3b5b3294dd76a49be6b8e9e748cb91, type: 3}
@@ -3698,7 +3702,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 9aa7776830808634c94e3649cfe585c1, type: 3}
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: dialogSounds.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: dialogSounds.Array.data[0]
@@ -5420,7 +5424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4641350556580474345, guid: 9580ef6af8ee8a746a46d8f08e46d5d4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 68.8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4641350556580474345, guid: 9580ef6af8ee8a746a46d8f08e46d5d4, type: 3}
       propertyPath: m_AnchoredPosition.y
