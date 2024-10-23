@@ -3703,11 +3703,11 @@ PrefabInstance:
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: dialogSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: fa68ac23abba492468c605d7afae21eb, type: 3}
+      objectReference: {fileID: 8300000, guid: 54cdf9c1c41dbb74c813473501bdd97e, type: 3}
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: dialogSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 105fd93b73ce40c4798e8029453e45d8, type: 3}
+      objectReference: {fileID: 8300000, guid: 1618116e5a9361e4bb92b1c567bc2842, type: 3}
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: dialogSounds.Array.data[2]
       value: 
