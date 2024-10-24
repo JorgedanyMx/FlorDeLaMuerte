@@ -504,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4641350556580474345, guid: 9580ef6af8ee8a746a46d8f08e46d5d4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 272.5
+      value: 216
       objectReference: {fileID: 0}
     - target: {fileID: 4641350556580474345, guid: 9580ef6af8ee8a746a46d8f08e46d5d4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4310,7 +4310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4641350556580474345, guid: 9580ef6af8ee8a746a46d8f08e46d5d4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 68.4
+      value: 135.7
       objectReference: {fileID: 0}
     - target: {fileID: 4641350556580474345, guid: 9580ef6af8ee8a746a46d8f08e46d5d4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4925,6 +4925,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1025412895165561445, guid: 8f3b5b3294dd76a49be6b8e9e748cb91, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1085094790933574408, guid: 8f3b5b3294dd76a49be6b8e9e748cb91, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8687,6 +8691,10 @@ PrefabInstance:
       value: UIPausa
       objectReference: {fileID: 0}
     - target: {fileID: 1810234999842153851, guid: d5c5d47f986369746b623ab7d1af769a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902466961365895288, guid: d5c5d47f986369746b623ab7d1af769a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -21350,6 +21358,21 @@ PrefabInstance:
     - target: {fileID: 3687496182420280496, guid: 67310d6ee06ce6046ac976547ddb8d4d, type: 3}
       propertyPath: m_PointLightOuterRadius
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054153178761749378, guid: 67310d6ee06ce6046ac976547ddb8d4d, type: 3}
+      propertyPath: m_text
+      value: "CR\xC9DITOS:\r\n\r\nProducci\xF3n: \r\nEvangelo Ruiz Morales\r\n\r\nGame
+        Design:\r\n-Evangelo Ruiz Morales.\r\n-Jorge Daniel Guerrero.\r\n\r\nAsistente
+        de Game Design:\r\n-Iv\xE1n Saucedo.\r\n\r\nProgramador L\xEDder: \r\n-Jorge
+        Daniel Guerrero.\r\n\r\nProgramaci\xF3n Interfaz: \r\n-Andr\xE9s Castro.\r\n\r\nProgramaci\xF3n
+        Control de volumen:\r\n -Andr\xE9s Castro.\r\n\r\nComposici\xF3n sonora:
+        \r\n-Claudia G Valdivia Enciso.\r\n\r\nDise\xF1o sonoro:\r\n-Claudia G Valdivia
+        Enciso.\r\n-Jorge Daniel Guerrero.\r\n\r\nDirecci\xF3n de Arte: \r\n-Sandra
+        Puente Figueroa.\r\n\r\nConcept Art:\r\n-Sandra Puente Figueroa.\r\n\r\nArte
+        digital:\r\n-Fernanda Adriano.\r\n-Bernardo Vez De La Garza.\r\n\r\nNarrativa:
+        \r\n-Evangelo Ruiz Morales.\r\n\r\nNarrativa visual:\r\n-Sandra Puente Figueroa.\r\n\r\nVoz
+        de Madre:\r\n-Eunice Gabriela\r\n\r\nEn Memoria de:\r\n-Rafael Alfaro Ruiz.\r\n-Eustaquio
+        Enciso Guti\xE9rrez.\r\n-Mario G\xF3mez.\r\n-Rosinda Figueroa."
       objectReference: {fileID: 0}
     - target: {fileID: 5538038471787452994, guid: 67310d6ee06ce6046ac976547ddb8d4d, type: 3}
       propertyPath: m_Name
