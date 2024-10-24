@@ -4210,23 +4210,27 @@ PrefabInstance:
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: environmentSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 542016474c41f1d4e832214651a2bca7, type: 3}
+      objectReference: {fileID: 8300000, guid: a7cb095879df11a4db60ea6e615cf64b, type: 3}
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: environmentSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: f52a169ce71a5724fa13911567d6073a, type: 3}
+      objectReference: {fileID: 8300000, guid: 799cde34e24939748a9fb76f0d96d108, type: 3}
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: environmentSounds.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 51d82d4398e3c3940911b06a2ce093e2, type: 3}
+      objectReference: {fileID: 8300000, guid: 47c1b03eb2dbdbb43afc70f291a0c520, type: 3}
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: environmentSounds.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 2450c06e26bdb17448c66b637341bf8f, type: 3}
+      objectReference: {fileID: 8300000, guid: 24259bdcd206a2647a66cfcb522d4d8b, type: 3}
+    - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
+      propertyPath: environmentSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: ac1fe7f3fb79e8841b0f5291b489cfb5, type: 3}
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: environmentSounds.Array.data[5]
       value: 
-      objectReference: {fileID: 8300000, guid: 80689e7f45b4c0840a745def1c18a630, type: 3}
+      objectReference: {fileID: 8300000, guid: adb040de20a8a4e468254f333c0da974, type: 3}
     - target: {fileID: 8605444810042260300, guid: 4fb6ca1385a60fe438455cd3662de4cf, type: 3}
       propertyPath: environmentSounds.Array.data[6]
       value: 
@@ -21513,6 +21517,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8284233068101353970, guid: 67310d6ee06ce6046ac976547ddb8d4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679468892150872894, guid: 67310d6ee06ce6046ac976547ddb8d4d, type: 3}
+      propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
